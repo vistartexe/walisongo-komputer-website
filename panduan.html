@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Panduan Konsultasi Komponen PC – Walisongo Komputer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pd-body">
+
+    <!-- KUMPULAN IKON SVG -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <symbol id="chat" viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <path d="M8 9h8M8 13h5"/>
+            </symbol>
+
+            <symbol id="arrow" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </symbol>
+
+            <symbol id="ok" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 12l3 3 5-6"/>
+            </symbol>
+
+            <symbol id="clock" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+            </symbol>
+
+            <symbol id="sliders" viewBox="0 0 24 24">
+                <path d="M4 7h10M18 7h2M4 17h2M10 17h10M4 12h16"/>
+                <circle cx="16" cy="7" r="2"/>
+                <circle cx="8" cy="17" r="2"/>
+            </symbol>
+
+            <symbol id="chip" viewBox="0 0 24 24">
+                <rect x="6" y="6" width="12" height="12" rx="2"/>
+                <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>
+            </symbol>
+
+            <symbol id="wallet" viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="13" rx="2"/>
+                <path d="M3 10h18M16 14h2"/>
+            </symbol>
+
+            <symbol id="film" viewBox="0 0 24 24">
+                <rect x="3" y="8" width="18" height="12" rx="2"/>
+                <path d="M3 8l3-5 4 5 4-5 4 5"/>
+            </symbol>
+
+            <symbol id="game" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="11" rx="5"/>
+                <path d="M7 10v5M4.500 12.500h5M16 11h.01M18 14h.01"/>
+            </symbol>
+
+            <symbol id="scan" viewBox="0 0 24 24">
+                <path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/>
+                <circle cx="12" cy="12" r="3"/>
+            </symbol>
+
+            <symbol id="monitor" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="12" rx="2"/>
+                <path d="M8 20h8M12 16v4"/>
+            </symbol>
+
+            <symbol id="headset" viewBox="0 0 24 24">
+                <path d="M4 14v-2a8 8 0 0 1 16 0v2"/>
+                <rect x="3" y="14" width="4" height="6" rx="1"/>
+                <rect x="17" y="14" width="4" height="6" rx="1"/>
+            </symbol>
+
+            <symbol id="list" viewBox="0 0 24 24">
+                <path d="M3 7l2 2 4-4M3 17l2 2 4-4M13 7h8M13 17h8"/>
+            </symbol>
+        </defs>
+    </svg>
+
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrap">
+
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+            </a>
+
+            <nav>
+                <a href="landing-page.html">Beranda</a>
+                <a href="panduan.html" class="on">Rekomendasi Rakit PC</a>
+                <a href="landing-page.html#katalog">Katalog Komponen</a>
+                <a href="landing-page.html#kontak">Bantuan &amp; Kontak</a>
+            </nav>
+
+            <a href="landing-page.html#kontak" class="btn dark">
+                <svg class="i">
+                    <use href="#chat"/>
+                </svg>
+                Tanya Teknisi
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="pd-main">
+
+        <!-- JUDUL DAN STEPPER -->
+        <div class="pd-panel">
+
+            <div class="pd-head">
+                <div>
+                    <span class="pill">
+                        Panduan Konsultasi Komponen PC
+                    </span>
+
+                    <h1>
+                        Bantu Kami Mengenal Kebutuhan Spesifikasi Komponen Anda
+                    </h1>
+
+                    <p>
+                        Tentukan jenis part yang sedang Anda cari (Processor,
+                        RAM, VGA Card, Motherboard, Storage/SSD, PSU, Cooler,
+                        Casing), beban kerja utama, dan budget per komponen.
+                    </p>
+                </div>
+
+                <span class="pd-badge">
+                    <svg class="i">
+                        <use href="#clock"/>
+                    </svg>
+                    Hanya butuh 1 menit
+                </span>
+            </div>
+
+            <div class="pd-steps">
+
+                <div class="pd-step">
+                    <i>
+                        <svg class="i">
+                            <use href="#ok"/>
+                        </svg>
+                    </i>
+
+                    <div>
+                        <small>Langkah 1</small>
+                        <b>Pilihan Part &amp; Beban Kerja</b>
+                        <span>Pilih komponen &amp; kebutuhan beban sistem</span>
+                    </div>
+                </div>
+
+                <div class="pd-step now">
+                    <i>2</i>
+
+                    <div>
+                        <small>
+                            Langkah 2 (Sedang diisi)
+                            <u class="pd-dot"></u>
+                        </small>
+
+                        <b>Budget Part &amp; Kriteria Khusus</b>
+                        <span>Tentukan alokasi dana &amp; platform brand</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- LANGKAH 1: PILIHAN PART DAN BEBAN KERJA -->
+        <div class="pd-panel">
+
+            <div class="pd-sh">
+                <span class="pd-num">1</span>
+
+                <div>
+                    <h2>Pilihan Part &amp; Beban Kerja Utama</h2>
+                    <p>
+                        Tentukan komponen yang ingin dicari dan karakteristik
+                        performa yang dibutuhkan.
+                    </p>
+                </div>
+
+                <span class="pd-tag">
+                    <svg class="i">
+                        <use href="#sliders"/>
+                    </svg>
+                    Modular &amp; Fleksibel
+                </span>
+            </div>
+
+
+            <!-- PILIH KOMPONEN -->
+            <div class="pd-q">
+                <div>
+                    <h3>
+                        1. Komponen apa saja yang ingin Anda cari /
+                        rekomendasikan?
+                    </h3>
+
+                    <p>
+                        Bisa pilih satu atau beberapa part untuk upgrade,
+                        maupun rakit lengkap.
+                    </p>
+                </div>
+
+                <button type="button" id="all" class="pd-tag pd-btn">
+                    <svg class="i">
+                        <use href="#chip"/>
+                    </svg>
+                    Pilih Semua Komponen (Rakit Full Part)
+                </button>
+            </div>
+
+            <div class="pd-g4">
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="CPU" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Processor (CPU)</b>
+                        <small>Otak performa komputasi</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="VGA" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Kartu Grafis (VGA/GPU)</b>
+                        <small>Render visual 3D &amp; game</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="RAM" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>RAM (Memory)</b>
+                        <small>DDR4 / DDR5 High Speed</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="Mobo" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Motherboard</b>
+                        <small>Chipset &amp; slot ekspansi</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="SSD" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Storage (SSD / HDD)</b>
+                        <small>NVMe PCIe Gen 4/5 cepat</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="PSU" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Power Supply (PSU)</b>
+                        <small>Sertifikasi 80 Plus Tier A/B</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="Cooler" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Cooler / Pendingin</b>
+                        <small>Air Cooler / AIO Liquid 240/360</small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="part" data-s="Casing" checked>
+                    <span class="pd-ck"></span>
+                    <span>
+                        <b>Casing PC</b>
+                        <small>Airflow &amp; form factor casing</small>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <hr class="pd-hr">
+
+
+            <!-- BEBAN KERJA UTAMA -->
+            <div class="pd-q">
+                <div>
+                    <h3>2. Apa beban kerja utama sistem Anda?</h3>
+                    <p>
+                        Karakteristik beban kerja menentukan tier part CPU,
+                        VRAM GPU, dan kestabilan daya.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pd-g2">
+
+                <label class="pd-opt pd-work">
+                    <input
+                        type="radio"
+                        name="work"
+                        data-t="Desain Grafis &amp; Video 4K"
+                        data-v="desain"
+                        checked
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#film"/>
+                        </svg>
+                    </span>
+
+                    <b>
+                        Desain Grafis &amp; Video 4K
+                        <em class="pd-me">Pilihan Anda</em>
+                    </b>
+
+                    <p>
+                        Photoshop, Premiere Pro, After Effects, Illustrator,
+                        Canva, rendering video mulus tanpa patah.
+                    </p>
+
+                    <span class="pd-tags">
+                        <span>VRAM GPU &gt;= 8GB</span>
+                        <span>RAM 32GB Recommended</span>
+                        <span>SSD NVMe Kencang</span>
+                    </span>
+                </label>
+
+
+                <label class="pd-opt pd-work">
+                    <input
+                        type="radio"
+                        name="work"
+                        data-t="Gaming &amp; Streaming"
+                        data-v="gaming"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#game"/>
+                        </svg>
+                    </span>
+
+                    <b>Gaming &amp; Streaming</b>
+
+                    <p>
+                        Game eSports &amp; AAA visual tinggi, frame rate
+                        stabil tinggi, encoder NVENC / AV1 untuk streaming.
+                    </p>
+
+                    <span class="pd-tags">
+                        <span>High Clock CPU</span>
+                        <span>Ray Tracing / DLSS</span>
+                        <span>OBS Ready</span>
+                    </span>
+                </label>
+
+
+                <label class="pd-opt pd-work">
+                    <input
+                        type="radio"
+                        name="work"
+                        data-t="Arsitektur, 3D Render &amp; AI"
+                        data-v="3d"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#scan"/>
+                        </svg>
+                    </span>
+
+                    <b>Arsitektur, 3D Render &amp; AI</b>
+
+                    <p>
+                        Blender, AutoCAD, SketchUp, rendering 3D, simulasi,
+                        pemrograman berat &amp; machine learning.
+                    </p>
+
+                    <span class="pd-tags">
+                        <span>Banyak Core/Threads</span>
+                        <span>CUDA Cores Tinggi</span>
+                        <span>RAM 32-64GB+</span>
+                    </span>
+                </label>
+
+
+                <label class="pd-opt pd-work">
+                    <input
+                        type="radio"
+                        name="work"
+                        data-t="Kantor, Kuliah &amp; Multitasking"
+                        data-v="kantor"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#monitor"/>
+                        </svg>
+                    </span>
+
+                    <b>Kantor, Kuliah &amp; Multitasking</b>
+
+                    <p>
+                        Aplikasi kasir, akuntansi, dokumen spreadsheet
+                        ratusan baris, multitasking browser stabil harian.
+                    </p>
+
+                    <span class="pd-tags">
+                        <span>Hemat Daya</span>
+                        <span>iGPU Cukup</span>
+                        <span>Awet Bertahun-tahun</span>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <!-- SOFTWARE YANG DIGUNAKAN -->
+            <div class="pd-q" style="margin-top: 28px;">
+                <div>
+                    <h3>Software yang aktif digunakan harian:</h3>
+                </div>
+            </div>
+
+            <div class="pd-g6">
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="Premiere, PS" checked>
+                    <span class="pd-ck"></span>
+                    <span>Adobe Premiere / PS</span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="After Effects" checked>
+                    <span class="pd-ck"></span>
+                    <span>After Effects</span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="Blender, 3ds Max">
+                    <span class="pd-ck"></span>
+                    <span>Blender / 3ds Max</span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="AutoCAD, SketchUp">
+                    <span class="pd-ck"></span>
+                    <span>AutoCAD / SketchUp</span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="Game AAA, Esports">
+                    <span class="pd-ck"></span>
+                    <span>Game AAA / Esports</span>
+                </label>
+
+                <label class="pd-opt">
+                    <input type="checkbox" name="sw" data-s="VS Code, Python">
+                    <span class="pd-ck"></span>
+                    <span>VS Code / Python</span>
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- LANGKAH 2: BUDGET DAN KRITERIA -->
+        <div class="pd-panel">
+
+            <div class="pd-sh">
+                <span class="pd-num">2</span>
+
+                <div>
+                    <h2>Budget Part &amp; Kriteria Spesifikasi Komponen</h2>
+                    <p>
+                        Tentukan alokasi dana dan kriteria teknis part
+                        yang Anda utamakan.
+                    </p>
+                </div>
+
+                <span class="pd-tag">
+                    <svg class="i">
+                        <use href="#wallet"/>
+                    </svg>
+                    Fleksibel per Komponen
+                </span>
+            </div>
+
+            <hr class="pd-hr" style="margin-top: 22px;">
+
+
+            <!-- PILIH BUDGET -->
+            <div class="pd-q">
+                <div>
+                    <h3>Estimasi Budget untuk Komponen yang Dipilih</h3>
+                </div>
+
+                <span class="pd-cur">
+                    Pilihan Saat Ini:
+                    <b id="cur">10 - 18 Juta</b>
+                </span>
+            </div>
+
+            <div class="pd-g5">
+
+                <label class="pd-chip">
+                    <input
+                        type="radio"
+                        name="budget"
+                        data-t="&lt; 5 Juta"
+                        data-mid="4"
+                        data-pct="10"
+                        data-v="lt5"
+                    >
+                    <span>&lt; 5 Juta</span>
+                </label>
+
+                <label class="pd-chip">
+                    <input
+                        type="radio"
+                        name="budget"
+                        data-t="5 - 10 Juta"
+                        data-mid="8"
+                        data-pct="30"
+                        data-v="5-10"
+                    >
+                    <span>5 - 10 Juta</span>
+                </label>
+
+                <label class="pd-chip">
+                    <input
+                        type="radio"
+                        name="budget"
+                        data-t="10 - 18 Juta"
+                        data-mid="15"
+                        data-pct="50"
+                        data-v="10-18"
+                        checked
+                    >
+                    <span>10 - 18 Juta</span>
+                </label>
+
+                <label class="pd-chip">
+                    <input
+                        type="radio"
+                        name="budget"
+                        data-t="18 - 28 Juta"
+                        data-mid="23"
+                        data-pct="70"
+                        data-v="18-28"
+                    >
+                    <span>18 - 28 Juta</span>
+                </label>
+
+                <label class="pd-chip">
+                    <input
+                        type="radio"
+                        name="budget"
+                        data-t="&gt; 28 Juta"
+                        data-mid="30"
+                        data-pct="90"
+                        data-v="gt28"
+                    >
+                    <span>&gt; 28 Juta</span>
+                </label>
+
+            </div>
+
+            <div class="pd-range">
+                <div class="pd-track">
+                    <i id="fill"></i>
+                </div>
+
+                <div class="pd-rl">
+                    <span>&lt; Rp 5 Juta</span>
+
+                    <b id="rangeMid">
+                        Rp 10 - 18 Juta (Pilihan Saat Ini: Sekitar Rp 15 Juta)
+                    </b>
+
+                    <span>&gt; Rp 28 Juta+</span>
+                </div>
+            </div>
+
+
+            <!-- PRIORITAS RACIKAN -->
+            <div class="pd-q" style="margin-top: 34px;">
+                <div>
+                    <h3>Kriteria &amp; Prioritas Racikan Part</h3>
+                    <p>
+                        Tentukan fokus arsitektur dan kualitas komponen
+                        yang paling diprioritaskan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pd-g2 pd-sm">
+
+                <label class="pd-opt">
+                    <input
+                        type="radio"
+                        name="prio"
+                        data-t="Performa &amp; Kompatibilitas 100%"
+                        data-v="performa"
+                        checked
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <b>
+                            Fokus Performa Maksimal
+                            <u class="pd-dot"></u>
+                        </b>
+
+                        <small>
+                            Utamakan alokasi ke CPU &amp; GPU tier tertinggi
+                            untuk rendering dan clock speed tercepat.
+                        </small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input
+                        type="radio"
+                        name="prio"
+                        data-t="Siap Upgrade Jangka Panjang"
+                        data-v="upgrade"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <b>Keseimbangan &amp; Siap Upgrade Jangka Panjang</b>
+                        <small>
+                            Motherboard VRM tangguh &amp; PSU tier tinggi
+                            (Gold/Platinum) agar siap upgrade komponen nanti.
+                        </small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input
+                        type="radio"
+                        name="prio"
+                        data-t="Efisiensi Daya &amp; Suhu Dingin"
+                        data-v="efisien"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <b>Efisiensi Daya &amp; Suhu Dingin</b>
+                        <small>
+                            Prioritas pendingin CPU (AIO / Dual Tower),
+                            aliran udara tenang, dan konsumsi daya rendah.
+                        </small>
+                    </span>
+                </label>
+
+                <label class="pd-opt">
+                    <input
+                        type="radio"
+                        name="prio"
+                        data-t="Budget Saver (Nilai Terbaik)"
+                        data-v="hemat"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <b>Budget Saver / Nilai Terbaik per Rupiah</b>
+                        <small>
+                            Maksimalkan rasio price-to-performance tanpa
+                            fitur kosmetik yang tidak diperlukan.
+                        </small>
+                    </span>
+                </label>
+
+            </div>
+
+
+            <!-- PREFERENSI BRAND -->
+            <div class="pd-q" style="margin-top: 34px;">
+                <div>
+                    <h3>Preferensi Platform &amp; Brand</h3>
+                    <p>
+                        Pilih kombinasi brand yang Anda inginkan atau
+                        serahkan pilihan terbaik kepada teknisi kami.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pd-g3">
+
+                <label class="pd-opt pd-brand">
+                    <input
+                        type="radio"
+                        name="brand"
+                        data-t="Rekomendasi Bebas Bottleneck"
+                        data-v="bebas"
+                        checked
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <small>Netral / Terbaik</small>
+                        <b>Bebas / Rekomendasikan yang Terbaik</b>
+                        <small>
+                            Teknisi memilih kombinasi paling optimal
+                            &amp; bebas bottleneck sesuai budget Anda.
+                        </small>
+                    </span>
+                </label>
+
+                <label class="pd-opt pd-brand">
+                    <input
+                        type="radio"
+                        name="brand"
+                        data-t="Prioritas Intel + NVIDIA"
+                        data-v="intel-nvidia"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <small>Intel + NVIDIA</small>
+                        <b>Prioritas Intel + NVIDIA</b>
+                        <small>
+                            Kombinasi Intel Core &amp; GeForce RTX dengan
+                            CUDA Cores maksimal untuk kerja kreatif.
+                        </small>
+                    </span>
+                </label>
+
+                <label class="pd-opt pd-brand">
+                    <input
+                        type="radio"
+                        name="brand"
+                        data-t="Prioritas Full AMD"
+                        data-v="amd"
+                    >
+
+                    <span class="pd-rd"></span>
+
+                    <span>
+                        <small>Full AMD Team Red</small>
+                        <b>Prioritas Full AMD (Ryzen + Radeon)</b>
+                        <small>
+                            Sinergi AMD Smart Access Memory, efisiensi daya
+                            tinggi, dan cache game yang melimpah.
+                        </small>
+                    </span>
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- RINGKASAN PILIHAN -->
+        <div class="pd-panel pd-sum">
+
+            <div class="pd-sh">
+                <svg
+                    class="i"
+                    style="width: 22px; height: 22px; color: var(--g800);"
+                >
+                    <use href="#list"/>
+                </svg>
+
+                <div class="pd-inl">
+                    <h2>Ringkasan Pilihan Anda</h2>
+                    <p>
+                        Kriteria spesifikasi komponen yang telah Anda tentukan:
+                    </p>
+                </div>
+
+                <span class="pd-tag pd-solid">
+                    <u class="pd-dot"></u>
+                    2/2 Terisi
+                </span>
+            </div>
+
+            <div class="pd-g4 pd-cells">
+
+                <div class="pd-cell">
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#chip"/>
+                        </svg>
+                    </span>
+
+                    <div>
+                        <small>Part yang Dicari</small>
+                        <b id="sPart"></b>
+                        <small id="sCount"></small>
+                    </div>
+                </div>
+
+                <div class="pd-cell">
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#film"/>
+                        </svg>
+                    </span>
+
+                    <div>
+                        <small>Beban Kerja</small>
+                        <b id="sWork"></b>
+                        <small id="sSw"></small>
+                    </div>
+                </div>
+
+                <div class="pd-cell">
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#wallet"/>
+                        </svg>
+                    </span>
+
+                    <div>
+                        <small>Budget Komponen</small>
+                        <b id="sBud"></b>
+                        <small id="sBudS"></small>
+                    </div>
+                </div>
+
+                <div class="pd-cell">
+                    <span class="pd-ic">
+                        <svg class="i">
+                            <use href="#ok"/>
+                        </svg>
+                    </span>
+
+                    <div>
+                        <small>Prioritas &amp; Platform</small>
+                        <b id="sPrio"></b>
+                        <small id="sBrand"></small>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pd-ready">
+                <svg class="i">
+                    <use href="#ok"/>
+                </svg>
+
+                <div>
+                    <b>
+                        Spesifikasi kebutuhan komponen sudah siap diracik!
+                    </b>
+
+                    <p>
+                        Sistem akan memilih kombinasi part dengan kecocokan
+                        soket, daya PSU, dan pendinginan yang pas.
+                    </p>
+                </div>
+
+                <span>
+                    <u class="pd-dot"></u>
+                    Siap Diberi Rekomendasi
+                </span>
+            </div>
+
+        </div>
+
+
+        <!-- BANTUAN DAN KONSULTASI -->
+        <div class="pd-help">
+
+            <span class="pd-ic">
+                <svg class="i">
+                    <use href="#headset"/>
+                </svg>
+            </span>
+
+            <div>
+                <b>
+                    Masih bingung dengan kompatibilitas komponen?
+                </b>
+
+                <p>
+                    Konsultasikan spesifikasi impian Anda langsung dengan
+                    tim teknisi Walisongo Komputer via WhatsApp untuk
+                    saran part paling presisi.
+                </p>
+            </div>
+
+            <a href="#" class="btn pd-wa">
+                <svg class="i">
+                    <use href="#chat"/>
+                </svg>
+                Konsultasi Gratis via WhatsApp
+            </a>
+
+        </div>
+
+
+        <!-- NAVIGASI BAWAH -->
+        <div class="pd-panel pd-nav">
+
+            <a href="landing-page.html" class="btn pd-back">
+                <svg class="i" style="transform: scaleX(-1);">
+                    <use href="#arrow"/>
+                </svg>
+                Kembali ke Beranda
+            </a>
+
+            <a href="hasil-rekomendasi.html" id="go" class="btn dark">
+                Lihat Rekomendasi Spesifikasi Komponen
+                <svg class="i">
+                    <use href="#arrow"/>
+                </svg>
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+
+            <div>
+                <b>Walisongo Komputer</b>
+
+                <p>
+                    © 2026 Walisongo Komputer Semarang. Solusi praktis
+                    dan terpercaya memilih spesifikasi idaman Anda.
+                </p>
+            </div>
+
+            <nav>
+                <a href="panduan.html">Panduan Memilih Spesifikasi</a>
+                <a href="landing-page.html#katalog">Katalog Toko</a>
+                <a href="landing-page.html#kontak">Hubungi Teknisi</a>
+                <a href="#">Kebijakan Privasi</a>
+            </nav>
+
+        </div>
+    </footer>
+
+</body>
+</html>

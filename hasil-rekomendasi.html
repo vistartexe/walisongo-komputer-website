@@ -1,0 +1,568 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hasil Rekomendasi Komponen PC – Walisongo Komputer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pd-body">
+
+    <!-- KUMPULAN IKON SVG -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <symbol id="chat" viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                <path d="M8 9h8M8 13h5"/>
+            </symbol>
+
+            <symbol id="arrow" viewBox="0 0 24 24">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+            </symbol>
+
+            <symbol id="ok" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 12l3 3 5-6"/>
+            </symbol>
+
+            <symbol id="down" viewBox="0 0 24 24">
+                <path d="M12 4v11M7 11l5 5 5-5M5 20h14"/>
+            </symbol>
+
+            <symbol id="bookmark" viewBox="0 0 24 24">
+                <path d="M6 3h12v18l-6-4-6 4z"/>
+            </symbol>
+
+            <symbol id="grid" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <path d="M3 10h18M3 15h18M9 4v16M15 4v16"/>
+            </symbol>
+
+            <symbol id="cash" viewBox="0 0 24 24">
+                <rect x="2" y="6" width="20" height="12" rx="2"/>
+                <circle cx="12" cy="12" r="3"/>
+            </symbol>
+
+            <symbol id="bolt" viewBox="0 0 24 24">
+                <path d="M13 3L5 14h6l-1 7 8-11h-6z"/>
+            </symbol>
+
+            <symbol id="shield" viewBox="0 0 24 24">
+                <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>
+            </symbol>
+
+            <symbol id="cart" viewBox="0 0 24 24">
+                <path d="M3 4h3l3 11h9l2-8H7"/>
+                <circle cx="10" cy="19" r="1.5"/>
+                <circle cx="17" cy="19" r="1.5"/>
+            </symbol>
+
+            <symbol id="chip" viewBox="0 0 24 24">
+                <rect x="6" y="6" width="12" height="12" rx="2"/>
+                <path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>
+            </symbol>
+
+            <symbol id="board" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <rect x="8" y="8" width="5" height="5"/>
+                <path d="M16 8v8M8 16h5"/>
+            </symbol>
+
+            <symbol id="gpu" viewBox="0 0 24 24">
+                <rect x="2" y="7" width="20" height="10" rx="2"/>
+                <circle cx="9" cy="12" r="2.5"/>
+                <path d="M15 10h4M15 14h4"/>
+            </symbol>
+
+            <symbol id="ram" viewBox="0 0 24 24">
+                <rect x="2" y="8" width="20" height="8" rx="1"/>
+                <path d="M6 11v2M10 11v2M14 11v2M18 11v2M5 16v2M19 16v2"/>
+            </symbol>
+
+            <symbol id="disk" viewBox="0 0 24 24">
+                <rect x="3" y="6" width="18" height="12" rx="2"/>
+                <path d="M3 14h18M16 16h2"/>
+            </symbol>
+
+            <symbol id="plug" viewBox="0 0 24 24">
+                <path d="M9 3v5M15 3v5M7 8h10v4a5 5 0 0 1-10 0zM12 17v4"/>
+            </symbol>
+
+            <symbol id="fan" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="2"/>
+                <path d="M12 10c0-4 1-7 4-7s2 5-4 7zM14 12c4 0 7 1 7 4s-5 2-7-4zM12 14c0 4-1 7-4 7s-2-5 4-7zM10 12c-4 0-7-1-7-4s5-2 7 4z"/>
+            </symbol>
+
+            <symbol id="monitor" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="12" rx="2"/>
+                <path d="M8 20h8M12 16v4"/>
+            </symbol>
+
+            <symbol id="swap" viewBox="0 0 24 24">
+                <path d="M4 8h14l-3-3M20 16H6l3 3"/>
+            </symbol>
+
+            <symbol id="compare" viewBox="0 0 24 24">
+                <path d="M4 4l6 6M4 4v4M4 4h4M20 20l-6-6M20 20v-4M20 20h-4"/>
+            </symbol>
+
+            <symbol id="sliders" viewBox="0 0 24 24">
+                <path d="M4 7h10M18 7h2M4 17h2M10 17h10M4 12h16"/>
+                <circle cx="16" cy="7" r="2"/>
+                <circle cx="8" cy="17" r="2"/>
+            </symbol>
+
+            <symbol id="smile" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 14a4 4 0 0 0 8 0M9 9.5h.01M15 9.5h.01"/>
+            </symbol>
+
+            <symbol id="print" viewBox="0 0 24 24">
+                <path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"/>
+            </symbol>
+
+            <symbol id="box" viewBox="0 0 24 24">
+                <path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/>
+            </symbol>
+
+            <symbol id="list" viewBox="0 0 24 24">
+                <path d="M3 7l2 2 4-4M3 17l2 2 4-4M13 7h8M13 17h8"/>
+            </symbol>
+        </defs>
+    </svg>
+
+
+    <!-- HEADER -->
+    <header>
+        <div class="wrap">
+
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+            </a>
+
+            <nav>
+                <a href="landing-page.html">Beranda</a>
+                <a href="panduan.html" class="on">Rekomendasi Rakit PC</a>
+                <a href="landing-page.html#katalog">Katalog Komponen</a>
+                <a href="landing-page.html#kontak">Bantuan &amp; Kontak</a>
+            </nav>
+
+            <a href="landing-page.html#kontak" class="btn dark">
+                <svg class="i">
+                    <use href="#chat"></use>
+                </svg>
+                Tanya Teknisi
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="pd-main hs-main">
+
+        <!-- RINGKASAN HASIL -->
+        <div class="pd-panel">
+            <div class="pd-head">
+
+                <div>
+                    <span class="pill hs-pill">
+                        <svg class="i">
+                            <use href="#ok"></use>
+                        </svg>
+                        Analisis Kompatibilitas Soket &amp; Daya:
+                        100% Cocok (Bebas Bottleneck)
+                    </span>
+
+                    <h1>
+                        Rekomendasi Spesifikasi Komponen PC Terbaik untuk Anda
+                    </h1>
+
+                    <p>
+                        Berdasarkan kebutuhan
+                        <b id="hWork">Desain Grafis &amp; Video 4K</b>
+                        dengan estimasi budget
+                        <b id="hBud">Rp 14 - 18 Juta</b>,
+                        berikut pilihan part individual paling seimbang,
+                        kompatibel 100%, dan bebas bottleneck.
+                    </p>
+                </div>
+
+                <div class="hs-acts">
+                    <a href="#" id="bPdf" class="btn hs-soft">
+                        <svg class="i">
+                            <use href="#down"></use>
+                        </svg>
+                        Unduh Rincian Part (PDF)
+                    </a>
+
+                    <a href="#" id="bSave" class="btn dark">
+                        <svg class="i">
+                            <use href="#bookmark"></use>
+                        </svg>
+                        Simpan Racikan
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- STATISTIK RACIKAN -->
+        <div class="hs-stats">
+
+            <div class="hs-stat">
+                <span class="pd-ic">
+                    <svg class="i">
+                        <use href="#grid"></use>
+                    </svg>
+                </span>
+
+                <div>
+                    <small>Sistem Racikan:</small>
+                    <b id="sCount">8 Komponen Modular Terpilih</b>
+                </div>
+            </div>
+
+            <div class="hs-stat">
+                <span class="pd-ic">
+                    <svg class="i">
+                        <use href="#cash"></use>
+                    </svg>
+                </span>
+
+                <div>
+                    <small>Total Estimasi 8 Komponen:</small>
+                    <b class="g" id="sTotal">Rp 17.850.000</b>
+                </div>
+            </div>
+
+            <div class="hs-stat">
+                <span class="pd-ic">
+                    <svg class="i">
+                        <use href="#bolt"></use>
+                    </svg>
+                </span>
+
+                <div>
+                    <small>Estimasi Konsumsi Daya:</small>
+                    <b class="g" id="sWatt">
+                        ~420 Watt (Rekomendasi PSU 650W)
+                    </b>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- JUDUL DAFTAR KOMPONEN -->
+        <div class="hs-sec">
+            <div>
+                <h2>Daftar Rincian Spesifikasi Komponen Per Part</h2>
+                <p>
+                    Susunan hardware individual terpilih dengan transparansi
+                    harga dan garansi resmi tiap komponen
+                </p>
+            </div>
+
+            <span class="pd-tag">
+                Garansi Resmi Distributor 2-5 Tahun
+            </span>
+        </div>
+
+
+        <!-- KARTU SPESIFIKASI UTAMA -->
+        <div class="hs-main-card">
+
+            <div class="hs-bar">
+                <b>
+                    <svg class="i">
+                        <use href="#ok"></use>
+                    </svg>
+                    SPESIFIKASI UTAMA • MODULAR &amp; KOMPATIBILITAS
+                    100% TERUJI
+                </b>
+
+                <span>Konfigurasi Paling Seimbang &amp; Fleksibel</span>
+            </div>
+
+            <div class="hs-body">
+
+                <!-- BAGIAN KIRI -->
+                <div class="hs-left">
+
+                    <div class="hs-photo">
+                        <img src="assets/pc-build.jpg" alt="Rakitan PC">
+
+                        <span>
+                            <svg class="i">
+                                <use href="#shield"></use>
+                            </svg>
+                            Garansi Resmi Tiap Part 2-3 Tahun
+                        </span>
+                    </div>
+
+                    <div class="hs-status">
+
+                        <div>
+                            <small>Status Komponen:</small>
+                            <b>
+                                <u class="pd-dot"></u>
+                                Ready Stock di Toko Walisongo Semarang
+                            </b>
+                        </div>
+
+                        <div>
+                            <small>Layanan Spesial:</small>
+                            <b>
+                                Gratis Jasa Rakit, Instal Windows 11 &amp;
+                                Driver, Cable Management Rapi
+                            </b>
+                        </div>
+
+                        <div>
+                            <small>Testing &amp; QC:</small>
+                            <b>Stress Test 2 Jam (AIDA64 &amp; Furmark)</b>
+                        </div>
+
+                    </div>
+
+                    <div class="hs-btns">
+                        <a href="#" id="bOrder" class="btn dark">
+                            <svg class="i">
+                                <use href="#cart"></use>
+                            </svg>
+                            Pesan Komponen Terpilih
+                        </a>
+
+                        <a href="landing-page.html#kontak" class="btn hs-soft">
+                            <svg class="i">
+                                <use href="#chat"></use>
+                            </svg>
+                            Konsultasi Penyesuaian Part via WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- BAGIAN KANAN -->
+                <div class="hs-right">
+
+                    <div class="hs-top">
+                        <small id="hKonf">
+                            Konfigurasi Spesifikasi Komponen Pilihan
+                            (Creator Studio Pro)
+                        </small>
+
+                        <span class="pd-tag">Bebas Custom Satuan</span>
+                    </div>
+
+                    <h2 class="hs-title" id="hTitle">
+                        Intel Core i5-14500 + RTX 4060 8GB + 32GB DDR5
+                    </h2>
+
+                    <div class="hs-price">
+                        <strong id="hPrice">Rp 17.850.000</strong>
+                        <s id="hOld">Rp 19.000.000</s>
+
+                        <span class="pd-tag" id="hSave">
+                            Total estimasi 8 part (Hemat Rp 1.150.000 paket)
+                        </span>
+                    </div>
+
+                    <p class="hs-note" id="hNote">
+                        Setiap komponen dapat dibeli terpisah, ditukar dengan
+                        merek lain, atau dirakitkan langsung gratis oleh
+                        teknisi Walisongo Komputer.
+                    </p>
+
+
+                    <!-- ALASAN REKOMENDASI -->
+                    <div class="hs-why">
+
+                        <h3>
+                            <svg class="i">
+                                <use href="#shield"></use>
+                            </svg>
+                            Mengapa Kombinasi Part Ini Direkomendasikan?
+                        </h3>
+
+                        <ul id="hWhy"></ul>
+
+                        <details class="hs-trace">
+                            <summary>
+                                Lihat jejak penalaran sistem pakar
+                                (Forward Chaining)
+                            </summary>
+
+                            <ol id="hTrace"></ol>
+                        </details>
+
+                    </div>
+
+
+                    <!-- RINCIAN HARGA KOMPONEN -->
+                    <div class="hs-top hs-lh">
+                        <h3>
+                            <svg class="i">
+                                <use href="#grid"></use>
+                            </svg>
+                            Rincian Harga &amp; Spesifikasi Part (Transparan):
+                        </h3>
+
+                        <span class="pd-tag">Bisa Ditukar Per Satuan</span>
+                    </div>
+
+                    <div id="hParts"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PILIHAN ALTERNATIF -->
+        <div class="hs-sec hs-alt-h" id="altHead">
+
+            <span class="pd-ic">
+                <svg class="i">
+                    <use href="#compare"></use>
+                </svg>
+            </span>
+
+            <div>
+                <h2>Pilihan Alternatif untuk Perbandingan</h2>
+                <p>
+                    Dua konfigurasi PC rakitan alternatif lainnya dengan
+                    target performa dan budget yang berbeda
+                </p>
+            </div>
+
+            <span class="pd-tag">
+                2 Opsi Racikan • Siap Dirakit
+            </span>
+        </div>
+
+        <div class="hs-alt" id="hAlt"></div>
+
+
+        <!-- BANTUAN PENYESUAIAN KOMPONEN -->
+        <div class="pd-help hs-help">
+
+            <span class="pd-ic">
+                <svg class="i">
+                    <use href="#sliders"></use>
+                </svg>
+            </span>
+
+            <div>
+                <b>
+                    Ingin Mengganti atau Menyesuaikan Salah Satu Komponen?
+                </b>
+
+                <p>
+                    Bebas tukar merek casing, tambah kapasitas SSD, ganti
+                    seri GPU, atau minta rekomendasi motherboard alternatif
+                    via teknisi Walisongo Komputer.
+                </p>
+            </div>
+
+            <a href="landing-page.html#kontak" class="btn hs-soft">
+                <svg class="i">
+                    <use href="#chat"></use>
+                </svg>
+                Tanya Teknisi Sekarang
+            </a>
+
+        </div>
+
+
+        <!-- KONFIRMASI HASIL -->
+        <div class="pd-panel hs-fin">
+
+            <span class="hs-sm">
+                <svg class="i">
+                    <use href="#smile"></use>
+                </svg>
+            </span>
+
+            <h2>
+                Apakah racikan komponen ini sudah sesuai dengan budget
+                &amp; target Anda?
+            </h2>
+
+            <p>
+                Pilihan spesifikasi ini dapat langsung disimpan untuk
+                dibawa ke toko atau disesuaikan kembali sesuai software
+                kerja Anda.
+            </p>
+
+            <div class="hs-fb">
+
+                <a href="#" id="bYes" class="btn dark">
+                    <svg class="i">
+                        <use href="#bookmark"></use>
+                    </svg>
+                    Ya, Sangat Pas (Simpan ke Riwayat Saya)
+                </a>
+
+                <a href="panduan.html" class="btn pd-back">
+                    <svg class="i">
+                        <use href="#sliders"></use>
+                    </svg>
+                    Ingin Ubah Komponen / Budget
+                </a>
+
+            </div>
+
+            <a href="#" id="bPrint" class="hs-pdf">
+                <svg class="i">
+                    <use href="#print"></use>
+                </svg>
+                Cetak atau simpan lembar spesifikasi rakitan ini
+                sebagai dokumen PDF
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="wrap">
+
+            <div>
+                <b>Walisongo Komputer</b>
+
+                <p>
+                    © 2026 Walisongo Komputer Semarang. Solusi praktis
+                    dan terpercaya memilih spesifikasi idaman Anda.
+                </p>
+            </div>
+
+            <nav>
+                <a href="panduan.html">Panduan Memilih Spesifikasi</a>
+                <a href="landing-page.html#katalog">Katalog Toko</a>
+                <a href="landing-page.html#kontak">Hubungi Teknisi</a>
+                <a href="#">Kebijakan Privasi</a>
+            </nav>
+
+        </div>
+    </footer>
+
+</body>
+</html>

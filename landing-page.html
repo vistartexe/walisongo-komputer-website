@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walisongo Komputer – Sistem Pakar Pemilihan Spesifikasi Komputer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Kumpulan simbol ikon -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <symbol id="chat" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        <path d="M8 9h8M8 13h5"/>
+      </symbol>
+
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+
+      <symbol id="grid" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="6" height="6" rx="1"/>
+        <rect x="14" y="4" width="6" height="6" rx="1"/>
+        <rect x="4" y="14" width="6" height="6" rx="1"/>
+        <rect x="14" y="14" width="6" height="6" rx="1"/>
+      </symbol>
+
+      <symbol id="shapes" viewBox="0 0 24 24">
+        <path d="M12 3l4 7H8z"/>
+        <rect x="3" y="14" width="7" height="7" rx="1"/>
+        <circle cx="17.5" cy="17.5" r="3.5"/>
+      </symbol>
+
+      <symbol id="sliders" viewBox="0 0 24 24">
+        <path d="M4 7h10M18 7h2M4 17h2M10 17h10M4 12h16"/>
+        <circle cx="16" cy="7" r="2"/>
+        <circle cx="8" cy="17" r="2"/>
+      </symbol>
+
+      <symbol id="checks" viewBox="0 0 24 24">
+        <path d="M3 7l2 2 4-4M3 17l2 2 4-4M13 7h8M13 17h8"/>
+      </symbol>
+
+      <symbol id="ok" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M8 12l3 3 5-6"/>
+      </symbol>
+
+      <symbol id="badge" viewBox="0 0 24 24">
+        <path d="M12 3l2.4 1.6 2.9-.1 1 2.7 2.4 1.7-.9 2.8.9 2.8-2.4 1.7-1 2.7-2.9-.1L12 21l-2.4-1.6-2.9.1-1-2.7-2.4-1.7.9-2.8-.9-2.8 2.4-1.7 1-2.7 2.9.1z"/>
+        <path d="M9 12l2 2 4-4"/>
+      </symbol>
+
+      <symbol id="wrench" viewBox="0 0 24 24">
+        <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.4 2.4-2.6-.6-.6-2.6z"/>
+      </symbol>
+
+      <symbol id="chip" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+      </symbol>
+
+      <symbol id="gauge" viewBox="0 0 24 24">
+        <path d="M4 18a9 9 0 1 1 16 0"/>
+        <path d="M12 14l4-4"/>
+      </symbol>
+
+      <symbol id="bolt" viewBox="0 0 24 24">
+        <path d="M13 3L5 14h6l-1 7 8-11h-6z"/>
+      </symbol>
+
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>
+      </symbol>
+
+      <symbol id="doc" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2"/>
+        <path d="M8 9h8M8 13h8M8 17h4"/>
+      </symbol>
+
+      <symbol id="tools" viewBox="0 0 24 24">
+        <path d="M14 6l4 4M4 20l8-8M16 4l4 4-3 3-4-4zM4 8l4-4 3 3-4 4z"/>
+      </symbol>
+
+      <symbol id="cog" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrap">
+
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+      </a>
+
+      <nav>
+        <a href="#" class="on">Beranda</a>
+        <a href="panduan.html">Rekomendasi Rakit PC</a>
+        <a href="#katalog">Katalog Komponen</a>
+        <a href="#kontak">Bantuan &amp; Kontak</a>
+      </nav>
+
+      <a href="#kontak" class="btn dark">
+        <svg class="i"><use href="#chat"/></svg>
+        Tanya Teknisi
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <div class="hero" id="rekomendasi">
+
+      <img src="assets/background.png" alt="" class="hero-bg">
+
+      <div class="wrap">
+
+        <span class="pill">Rekomendasi Spesifikasi Komputer</span>
+
+        <h1>Cari &amp; Pilih Komponen PC Terbaik Sesuai Kebutuhan Anda</h1>
+
+        <p>
+          Bingung pilih Processor apa yang cocok, berapa kapasitasi RAM yang pas,
+          atau tipe VGA yang tepat tanpa bottleneck? Temukan rekomendasi per
+          komponen terbaik sesuai budget dan beban kerja Anda.
+        </p>
+
+        <div class="cta">
+          <a href="panduan.html" class="btn dark">
+            Cari Rekomendasi Part
+            <svg class="i"><use href="#arrow"/></svg>
+          </a>
+
+          <a href="#katalog" class="btn out">
+            <svg class="i"><use href="#grid"/></svg>
+            Jelajahi Panduan Komponen
+          </a>
+        </div>
+
+        <div class="stats">
+          <div>
+            <b>100%</b>
+            <span>Garansi Resmi Tiap Part</span>
+          </div>
+
+          <div>
+            <b>Spesifik</b>
+            <span>Rekomendasi Satuan</span>
+          </div>
+
+          <div>
+            <b>Bebas Bottleneck</b>
+            <span>Kesesuaian Antar Part</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- LANGKAH PENGGUNAAN -->
+    <section class="steps">
+      <div class="wrap c">
+
+        <span class="eyebrow">Sangat mudah &amp; cepat</span>
+
+        <h2>Hanya 3 Langkah Mudah Menemukan Komponen Tepat</h2>
+
+        <p class="sub">
+          Tidak perlu pusing membaca tabel spesifikasi yang rumit.
+          Kami bantu pilihkan konfigurasi part yang paling pas dan bebas bottleneck.
+        </p>
+
+        <div class="grid3">
+
+          <div class="card step">
+            <div class="ico">
+              <svg class="i"><use href="#shapes"/></svg>
+            </div>
+
+            <span class="eyebrow">Langkah 1</span>
+            <h3>Pilih Kebutuhan &amp; Target Kerja</h3>
+
+            <p>
+              Tentukan beban software utama: Gaming kompetitif/AAA,
+              Render 3D &amp; Arsitektur, Desain Grafis &amp; Video Editing,
+              atau Office &amp; Kasir.
+            </p>
+          </div>
+
+          <div class="card step">
+            <div class="ico">
+              <svg class="i"><use href="#sliders"/></svg>
+            </div>
+
+            <span class="eyebrow">Langkah 2</span>
+            <h3>Tentukan Komponen yang Ingin Dicari</h3>
+
+            <p>
+              Bisa konsultasi per Processor &amp; VGA saja, upgrade RAM &amp; SSD,
+              atau rekomendasi komponen komplit dari nol.
+            </p>
+          </div>
+
+          <div class="card step">
+            <div class="ico hl">
+              <svg class="i"><use href="#checks"/></svg>
+            </div>
+
+            <span class="eyebrow">Langkah 3</span>
+            <h3>Dapatkan Rekomendasi Part Spesifik</h3>
+
+            <p>
+              Disertai analisis kecocokan socket motherboard, efisiensi daya PSU,
+              estimasi harga satuan transparan, dan jaminan kompatibilitas 100%.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="why">
+      <div class="wrap c">
+
+        <span class="eyebrow">Mengapa memilih kami?</span>
+
+        <h2>Pengalaman Merakit PC yang Tenang, Amanah &amp; Profesional</h2>
+
+        <p class="sub">
+          Kami memastikan setiap komponen bersinergi maksimal demi performa stabil
+          dalam jangka panjang.
+        </p>
+
+        <div class="grid3" style="text-align:left">
+
+          <div class="card feat">
+            <div class="ico">
+              <svg class="i"><use href="#ok"/></svg>
+            </div>
+
+            <h3>Kompatibilitas 100% Terjamin</h3>
+
+            <p>
+              Bebas bottleneck &amp; dijamin klop tiap part. Kami mengecek
+              kecocokan socket motherboard, soket prosesor, daya PSU,
+              hingga dimensi casing.
+            </p>
+          </div>
+
+          <div class="card feat">
+            <div class="ico">
+              <svg class="i"><use href="#badge"/></svg>
+            </div>
+
+            <h3>Harga Transparan &amp; Komponen Asli</h3>
+
+            <p>
+              Garansi resmi distributor Indonesia untuk setiap komponen.
+              Nota transparan dan box kemasan asli semua part diserahkan
+              lengkap ke Anda.
+            </p>
+          </div>
+
+          <div class="card feat">
+            <div class="ico">
+              <svg class="i"><use href="#wrench"/></svg>
+            </div>
+
+            <h3>Gratis Jasa Rakit &amp; Kabel Rapi</h3>
+
+            <p>
+              Siap pakai langsung tanpa ribet, manajemen kabel rapi dan estetik,
+              terinstal sistem operasi &amp; software esensial, serta lolos
+              tes benchmark ketat.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KATALOG KOMPONEN -->
+    <section class="cat" id="katalog">
+      <div class="wrap">
+
+        <div class="cat-h">
+          <div>
+            <span class="eyebrow">Katalog rekomendasi per part</span>
+            <h2>Rekomendasi Komponen Terpopuler per Kategori</h2>
+          </div>
+
+          <p>
+            Pilihan komponen terbaik per kategori dengan perbandingan
+            spesifikasi inti dan harga satuan.
+          </p>
+        </div>
+
+        <div class="grid3 prods">
+
+          <!-- PROCESSOR -->
+          <article class="card prod">
+            <div class="pimg">
+              <span class="badge">Kategori CPU</span>
+              <img src="assets/prosesor.png" alt="Processor">
+            </div>
+
+            <div class="pbody">
+              <div class="ph">
+                <h3>AMD Ryzen &amp; Intel Core</h3>
+                <em>Mulai Rp 1.5jt</em>
+              </div>
+
+              <p class="pick">
+                Pilihan: AMD Ryzen 5 7600X &amp; Intel Core i5-14600K
+              </p>
+
+              <ul>
+                <li>
+                  <svg class="i"><use href="#chip"/></svg>
+                  Ryzen 5 7600X • 6C/12T • Up to 5.3GHz (~Rp 3.45jt)
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#gauge"/></svg>
+                  Core i5-14600K • 14C/20T • Up to 5.3GHz (~Rp 5.25jt)
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#ok"/></svg>
+                  Socket AM5 &amp; LGA1700 • Garansi Resmi 3 Tahun
+                </li>
+              </ul>
+
+              <a href="#" class="btn">
+                Lihat Detail Spesifikasi Part
+                <svg class="i"><use href="#doc"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- VGA -->
+          <article class="card prod top">
+            <span class="tag-top">Paling Dicari</span>
+
+            <div class="pimg">
+              <span class="badge">Kategori GPU</span>
+              <img src="assets/gpu.png" alt="VGA">
+            </div>
+
+            <div class="pbody">
+              <div class="ph">
+                <h3>NVIDIA GeForce &amp; AMD Radeon</h3>
+                <em>Mulai Rp 4.8jt</em>
+              </div>
+
+              <p class="pick">
+                Pilihan: NVIDIA RTX 4060 8GB &amp; AMD RX 7600 XT 16GB
+              </p>
+
+              <ul>
+                <li>
+                  <svg class="i"><use href="#bolt"/></svg>
+                  RTX 4060 8GB • TDP 115W • Rekomendasi PSU 500W
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#gauge"/></svg>
+                  RX 7600 XT 16GB VRAM • Cocok Rendering &amp; AI
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#shield"/></svg>
+                  Dukungan Ray Tracing &amp; DLSS 3 / FSR 3
+                </li>
+              </ul>
+
+              <a href="#" class="btn">
+                Lihat Detail Spesifikasi Part
+                <svg class="i"><use href="#arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- RAM DAN SSD -->
+          <article class="card prod">
+            <div class="pimg">
+              <span class="badge">Memory &amp; Storage</span>
+              <img src="assets/memori.png" alt="RAM dan SSD">
+            </div>
+
+            <div class="pbody">
+              <div class="ph">
+                <h3>DDR5 Kit &amp; NVMe Gen 4</h3>
+                <em>Mulai Rp 850rb</em>
+              </div>
+
+              <p class="pick">
+                Pilihan: RAM DDR5 32GB 6000MHz &amp; NVMe Gen 4 1TB
+              </p>
+
+              <ul>
+                <li>
+                  <svg class="i"><use href="#chip"/></svg>
+                  RAM 32GB (2×16GB) 6000MHz CL30 • Low Latency
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#gauge"/></svg>
+                  SSD NVMe Gen4 1TB Read 7000MB/s (~Rp 1.35jt)
+                </li>
+
+                <li>
+                  <svg class="i"><use href="#shield"/></svg>
+                  Garansi Resmi Lifetime (RAM) &amp; 5 Tahun (SSD)
+                </li>
+              </ul>
+
+              <a href="#" class="btn">
+                Lihat Detail Spesifikasi Part
+                <svg class="i"><use href="#doc"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="cta-s" id="kontak">
+      <div class="wrap">
+        <div class="box">
+
+          <span class="pill">
+            <svg class="i"><use href="#tools"/></svg>
+            Konsultasi Teknisi Walisongo Komputer
+          </span>
+
+          <h2>Punya Part Sendiri atau Mau Konsultasi Spesifik?</h2>
+
+          <p>
+            Teknisi Walisongo Komputer siap bantu lewat WhatsApp.
+            Mau upgrade bertahap, cek kompatibilitas komponen yang sudah
+            Anda miliki, atau racik dari nol, kami bantu dengan ramah
+            dan transparan.
+          </p>
+
+          <div class="cta">
+            <a href="#" class="btn white">
+              <svg class="i"><use href="#chat"/></svg>
+              Tanya Teknisi via WhatsApp
+            </a>
+
+            <a href="panduan.html" class="btn line">
+              <svg class="i"><use href="#cog"/></svg>
+              Mulai Simulasi Rakit PC
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+
+      <div>
+        <b>Walisongo Komputer</b>
+        <p>
+          © 2026 Walisongo Komputer Semarang. Solusi praktis dan terpercaya
+          memilih spesifikasi idaman Anda.
+        </p>
+      </div>
+
+      <nav>
+        <a href="#">Panduan Memilih Spesifikasi</a>
+        <a href="#katalog">Katalog Toko</a>
+        <a href="#kontak">Hubungi Teknisi</a>
+        <a href="#">Kebijakan Privasi</a>
+      </nav>
+
+    </div>
+  </footer>
+
+</body>
+</html>
