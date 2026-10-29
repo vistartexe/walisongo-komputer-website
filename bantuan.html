@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walisongo Komputer | Bantuan &amp; Kontak</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pd-body">
+
+  <!-- Kumpulan simbol ikon -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+      <symbol id="home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></symbol>
+      <symbol id="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="chevr" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+      <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+      <symbol id="chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+      <symbol id="gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 14l4-4"/></symbol>
+      <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
+      <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="badge" viewBox="0 0 24 24"><path d="M12 3l2.4 1.6 2.9-.1 1 2.7 2.4 1.7-.9 2.8.9 2.8-2.4 1.7-1 2.7-2.9-.1L12 21l-2.4-1.6-2.9.1-1-2.7-2.4-1.7.9-2.8-.9-2.8 2.4-1.7 1-2.7 2.9.1z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+      <symbol id="sort" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></symbol>
+      <symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+      <symbol id="store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a3 3 0 0 0 5.3 2 3 3 0 0 0 5.4 0A3 3 0 0 0 20 9"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></symbol>
+      <symbol id="nav" viewBox="0 0 24 24"><path d="M12 3l7 17-7-4-7 4z"/></symbol>
+      <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+      <symbol id="map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+      <symbol id="tools" viewBox="0 0 24 24"><path d="M14 6l4 4M4 20l8-8M16 4l4 4-3 3-4-4zM4 8l4-4 3 3-4 4z"/></symbol>
+      <symbol id="grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrap">
+
+      <a href="landing-page.html" class="logo">
+        <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+      </a>
+
+      <nav>
+        <a href="landing-page.html">Beranda</a>
+        <a href="panduan.html">Rekomendasi Rakit PC</a>
+        <a href="katalog.html">Katalog Komponen</a>
+        <a href="bantuan.html" class="on">Bantuan &amp; Kontak</a>
+      </nav>
+
+      <a href="bantuan.html" class="btn dark">
+        <svg class="i"><use href="#chat"/></svg>
+        Tanya Teknisi
+      </a>
+
+    </div>
+  </header>
+
+  <main class="pd-main">
+
+    <nav class="kt-crumb" aria-label="Breadcrumb">
+      <svg class="i"><use href="#home"/></svg>
+      <a href="landing-page.html">Beranda</a>
+      <span>›</span>
+      <b>Bantuan &amp; Kontak</b>
+    </nav>
+
+    <!-- JUDUL -->
+    <section class="pd-panel bk-hero">
+
+      <span class="kt-pill"><i></i> Garansi Resmi &amp; Transparansi Harga</span>
+
+      <h1>Pusat Bantuan &amp; Kontak Toko</h1>
+
+      <p>
+        Ada pertanyaan seputar rakitan PC, kompatibilitas komponen, atau ingin
+        datang langsung ke toko Walisongo Komputer? Kami siap membantu dengan
+        ramah dan transparan bagi semua pengguna perakitan komputer.
+      </p>
+
+      <div class="bk-meta">
+        <span><svg class="i"><use href="#badge"/></svg>Garansi Toko &amp; Distributor Resmi</span>
+        <span><svg class="i"><use href="#ok"/></svg>Panduan &amp; Pengecekan Gratis</span>
+        <span><svg class="i"><use href="#calendar"/></svg>Area Ngaliyan, Kota Semarang</span>
+      </div>
+
+    </section>
+
+    <!-- SALURAN BANTUAN -->
+    <div class="bk-sec" id="saluran">
+      <h2>Saluran Bantuan Langsung</h2>
+      <p>Pilih cara bertanya atau bertemu yang paling cocok dengan Anda.</p>
+    </div>
+
+    <div class="bk-ch">
+
+      <article class="bk-card">
+        <span class="pd-ic"><svg class="i"><use href="#chat"/></svg></span>
+        <h3>Hubungi Teknisi via WhatsApp</h3>
+        <p>
+          Konsultasi spesifikasi part, cek ketersediaan stok, dan panduan
+          daftar gratis langsung bersama teknisi kami.
+        </p>
+        <div class="bk-box">
+          <div class="bk-row"><small>Nomor Toko</small><b>+62 812-3456-7890</b></div>
+        </div>
+        <a href="#" class="btn dark" data-wa="Halo teknisi Walisongo Komputer, saya ingin bertanya seputar rakitan PC.">
+          <svg class="i"><use href="#chat"/></svg>
+          Chat WhatsApp Teknisi
+        </a>
+      </article>
+
+      <article class="bk-card">
+        <span class="pd-ic"><svg class="i"><use href="#store"/></svg></span>
+        <h3>Datang ke Toko Fisik Semarang</h3>
+        <p>
+          Uji coba komponen langsung, konsultasikan PC siap pakai, dan cek
+          hardware secara tatap muka di toko.
+        </p>
+        <div class="bk-box bk-info">
+          <div>
+            <svg class="i"><use href="#pin"/></svg>
+            <span>Jl. Prof. Dr. Hamka, Tambakaji, Kec. Ngaliyan, Kota Semarang, Jawa Tengah 50185</span>
+          </div>
+          <div>
+            <svg class="i"><use href="#clock"/></svg>
+            <span>Senin - Sabtu: 08.00 - 20.00 WIB</span>
+          </div>
+        </div>
+        <a href="#" class="btn out" data-map>
+          <svg class="i"><use href="#nav"/></svg>
+          Petunjuk Arah Google Maps
+        </a>
+      </article>
+
+      <article class="bk-card">
+        <span class="pd-ic"><svg class="i"><use href="#shield"/></svg></span>
+        <h3>Garansi &amp; Klaim Distributor</h3>
+        <p>
+          Bantuan klaim garansi untuk komponen. Seluruh bergaransi resmi
+          distributor Indonesia, kami bantu urus administrasinya.
+        </p>
+        <div class="bk-box bk-list">
+          <b>Kategori Garansi:</b>
+          <span>Processor, Motherboard, VGA: 3-5 Tahun</span>
+          <span>RAM, SSD (Garansi Resmi Distributor): 5 Tahun / Lifetime</span>
+          <span>Power Supply &amp; Peripheral PC: 1-3 Tahun</span>
+        </div>
+        <a href="#" class="btn mid" data-wa="Halo teknisi Walisongo Komputer, saya ingin menanyakan klaim garansi komponen.">
+          <svg class="i"><use href="#badge"/></svg>
+          Info Garansi Resmi
+        </a>
+      </article>
+
+    </div>
+
+    <!-- FAQ + FORM -->
+    <div class="bk-two">
+
+      <section class="pd-panel bk-faq">
+        <div class="bk-ph">
+          <svg class="i"><use href="#chat"/></svg>
+          <div>
+            <h2>Pertanyaan yang Sering Diajukan</h2>
+            <p>Jawaban gamblang dan terhitung semua yang baru pertama kali merakit PC.</p>
+          </div>
+        </div>
+
+        <details open>
+          <summary>Apakah saya bisa konsultasi dulu sebelum beli komponen?
+            <svg class="i"><use href="#chev"/></svg></summary>
+          <p>
+            Tentu saja! Konsultasi sepenuhnya <b>gratis</b> tanpa paksaan
+            membeli. Anda bisa bertanya langsung via WhatsApp teknisi kami
+            atau memanfaatkan sistem pencarian cerdas kami untuk
+            menyesuaikan pilihan dengan anggaran dan kebutuhan software Anda.
+          </p>
+        </details>
+
+        <details>
+          <summary>Bagaimana jika komponen yang saya pilih ternyata tidak kompatibel?
+            <svg class="i"><use href="#chev"/></svg></summary>
+          <p>
+            Sebelum Anda membayar, teknisi kami mengecek socket prosesor,
+            tipe RAM, dimensi casing, hingga kebutuhan daya PSU. Bila setelah
+            pembelian ditemukan part yang tidak cocok akibat kesalahan
+            rekomendasi kami, kami bantu tukar dengan part yang sesuai.
+          </p>
+        </details>
+
+        <details>
+          <summary>Berapa lama proses perakitan PC sampai siap dibawa pulang?
+            <svg class="i"><use href="#chev"/></svg></summary>
+          <p>
+            Umumnya <b>1–2 hari kerja</b> bila seluruh komponen tersedia di
+            toko. Prosesnya mencakup perakitan, manajemen kabel rapi,
+            instalasi sistem operasi, serta tes benchmark. Untuk part
+            indent, estimasi waktu kami kabarkan sebelumnya.
+          </p>
+        </details>
+
+        <details>
+          <summary>Apakah semua komponen bergaransi resmi distributor Indonesia?
+            <svg class="i"><use href="#chev"/></svg></summary>
+          <p>
+            Ya. Semua komponen yang kami jual bergaransi resmi distributor
+            Indonesia, lengkap dengan box kemasan asli dan nota pembelian
+            sebagai dasar klaim garansi.
+          </p>
+        </details>
+      </section>
+
+      <section class="pd-panel">
+        <div class="bk-ph">
+          <svg class="i"><use href="#mail"/></svg>
+          <div>
+            <h2>Kirim Pesan Ringkas</h2>
+            <p>Tinggalkan pertanyaan, teknisi kami segera menghubungi Anda.</p>
+          </div>
+        </div>
+
+        <form class="bk-form" id="msgForm" novalidate>
+          <label>Nama Lengkap
+            <input id="fNama" type="text" placeholder="Contoh: Budi Santoso" autocomplete="name" required>
+          </label>
+
+          <label>Nomor WhatsApp
+            <input id="fWa" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" autocomplete="tel" required>
+          </label>
+
+          <label>Topik Pertanyaan
+            <select id="fTopik">
+              <option>Konsultasi Rakit PC</option>
+              <option>Cek Kompatibilitas Part</option>
+              <option>Info Harga &amp; Stok</option>
+              <option>Klaim Garansi</option>
+              <option>Lainnya</option>
+            </select>
+          </label>
+
+          <label>Pesan Singkat
+            <textarea id="fPesan" placeholder="Tuliskan kebutuhan rakitan, budget, atau part yang ingin ditanyakan…" required></textarea>
+          </label>
+
+          <p class="bk-err" id="fErr" role="alert"></p>
+
+          <button type="submit" class="btn dark">
+            <svg class="i"><use href="#send"/></svg>
+            Kirim Pertanyaan
+          </button>
+
+          <p class="bk-note">
+            Data Anda aman dan hanya digunakan untuk menjawab pertanyaan Anda.
+          </p>
+        </form>
+      </section>
+
+    </div>
+
+    <!-- LOKASI -->
+    <div class="bk-loc" id="lokasi">
+      <span class="pd-ic"><svg class="i"><use href="#pin"/></svg></span>
+      <div>
+        <b>Lokasi Toko Fisik Walisongo Komputer</b>
+        <p>Dekat Kampus 3 UIN Walisongo, Kawasan Ngaliyan, Kota Semarang. Parkir motor dan mobil luas &amp; aman.</p>
+      </div>
+      <a href="#" class="btn" data-map>
+        <svg class="i"><use href="#map"/></svg>
+        Buka di Peta
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+
+      <div>
+        <b>Walisongo Komputer</b>
+        <p>
+          © 2026 Walisongo Komputer Semarang. Solusi praktis dan terpercaya
+          memilih spesifikasi idaman Anda.
+        </p>
+      </div>
+
+      <nav>
+        <a href="panduan.html">Panduan Memilih Spesifikasi</a>
+        <a href="katalog.html">Katalog Toko</a>
+        <a href="bantuan.html">Hubungi Teknisi</a>
+        <a href="#">Kebijakan Privasi</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("msgForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var nama = document.getElementById("fNama").value.trim();
+      var wa = document.getElementById("fWa").value.trim();
+      var pesan = document.getElementById("fPesan").value.trim();
+      var err = document.getElementById("fErr");
+
+      if (!nama || !pesan) { err.textContent = "Mohon isi nama dan pesan Anda."; return; }
+      if (!/^(\+?62|0)8[0-9]{7,12}$/.test(wa.replace(/[\s-]/g, ""))) {
+        err.textContent = "Nomor WhatsApp tidak valid. Contoh: 081234567890."; return;
+      }
+      err.textContent = "";
+
+      var text = "Halo teknisi Walisongo Komputer,\n" +
+        "Nama: " + nama + "\n" +
+        "WhatsApp: " + wa + "\n" +
+        "Topik: " + document.getElementById("fTopik").value + "\n\n" + pesan;
+      window.open(waLink(text), "_blank", "noopener");
+    });
+  </script>
+
+</body>
+</html>

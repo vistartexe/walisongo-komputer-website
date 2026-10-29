@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Walisongo Komputer | Katalog</title>
+  <title>Walisongo Komputer | Katalog Komponen</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,295 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="pd-body">
+
+  <!-- Kumpulan simbol ikon -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+      <symbol id="home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></symbol>
+      <symbol id="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="chevr" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+      <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+      <symbol id="chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+      <symbol id="gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 14l4-4"/></symbol>
+      <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
+      <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="badge" viewBox="0 0 24 24"><path d="M12 3l2.4 1.6 2.9-.1 1 2.7 2.4 1.7-.9 2.8.9 2.8-2.4 1.7-1 2.7-2.9-.1L12 21l-2.4-1.6-2.9.1-1-2.7-2.4-1.7.9-2.8-.9-2.8 2.4-1.7 1-2.7 2.9.1z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+      <symbol id="sort" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></symbol>
+      <symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+      <symbol id="store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a3 3 0 0 0 5.3 2 3 3 0 0 0 5.4 0A3 3 0 0 0 20 9"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></symbol>
+      <symbol id="nav" viewBox="0 0 24 24"><path d="M12 3l7 17-7-4-7 4z"/></symbol>
+      <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+      <symbol id="map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+      <symbol id="tools" viewBox="0 0 24 24"><path d="M14 6l4 4M4 20l8-8M16 4l4 4-3 3-4-4zM4 8l4-4 3 3-4 4z"/></symbol>
+      <symbol id="grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrap">
+
+      <a href="landing-page.html" class="logo">
+        <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+      </a>
+
+      <nav>
+        <a href="landing-page.html">Beranda</a>
+        <a href="panduan.html">Rekomendasi Rakit PC</a>
+        <a href="katalog.html" class="on">Katalog Komponen</a>
+        <a href="bantuan.html">Bantuan &amp; Kontak</a>
+      </nav>
+
+      <a href="bantuan.html" class="btn dark">
+        <svg class="i"><use href="#chat"/></svg>
+        Tanya Teknisi
+      </a>
+
+    </div>
+  </header>
+
+  <main class="pd-main">
+
+    <nav class="kt-crumb" aria-label="Breadcrumb">
+      <svg class="i"><use href="#home"/></svg>
+      <a href="landing-page.html">Beranda</a>
+      <span>›</span>
+      <b>Katalog Komponen</b>
+    </nav>
+
+    <!-- JUDUL + PENCARIAN -->
+    <section class="pd-panel kt-hero">
+
+      <span class="kt-pill"><i></i> Distributor Resmi &amp; Toko Fisik Semarang</span>
+
+      <h1>Katalog Komponen PC</h1>
+
+      <p>
+        Pilih komponen berkualitas bergaransi resmi untuk rakitan PC impian
+        Anda. Ramah dompet, dengan panduan kompatibilitas yang jelas.
+      </p>
+
+      <form class="kt-search" id="searchForm" role="search">
+        <svg class="i"><use href="#search"/></svg>
+        <input id="q" type="search" placeholder="Cari komponen (mis. RTX 4060, Intel i5, SSD)…" aria-label="Cari komponen" autocomplete="off">
+        <button type="submit" class="btn dark">Cari</button>
+      </form>
+
+    </section>
+
+    <!-- FILTER KATEGORI -->
+    <div class="kt-filter" id="chips" role="group" aria-label="Filter kategori"></div>
+
+    <div class="kt-sort">
+      <svg class="i"><use href="#sort"/></svg>
+      Urutkan:
+      <select id="kSort" aria-label="Urutkan komponen">
+        <option value="pop">Paling Populer</option>
+        <option value="low">Harga Terendah</option>
+        <option value="high">Harga Tertinggi</option>
+        <option value="az">Nama A–Z</option>
+      </select>
+      <span class="kt-count" id="count"></span>
+    </div>
+
+    <!-- DAFTAR PRODUK -->
+    <div class="kt-grid" id="kGrid" aria-live="polite"></div>
+
+    <!-- BANTUAN -->
+    <div class="pd-help kt-help">
+      <span class="pd-ic"><svg class="i"><use href="#shield"/></svg></span>
+      <div>
+        <b>Bingung apakah komponen cocok satu sama lain?</b>
+        <p>
+          Gunakan fitur Simulasi Rekomendasi Rakit PC otomatis kami, atau
+          hubungi teknisi Walisongo Komputer langsung untuk cek socket CPU,
+          ketinggian casing, dan kapasitas watt daya PSU.
+        </p>
+      </div>
+      <div class="kt-help-acts">
+        <a href="panduan.html" class="btn out">Simulasi Rakit PC</a>
+        <a href="#" class="btn dark" data-wa="Halo teknisi Walisongo Komputer, saya ingin konsultasi kecocokan komponen PC.">
+          <svg class="i"><use href="#chat"/></svg>
+          Konsultasi Gratis
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BAR PART TERPILIH -->
+  <div class="kt-bar" id="bar" role="status">
+    <span class="pd-ic"><svg class="i"><use href="#list"/></svg></span>
+    <div>
+      <small id="barCount">0 Komponen Terpilih</small>
+      <b id="barTotal">Rp 0</b>
+    </div>
+    <button type="button" class="kt-reset" id="reset">Kosongkan</button>
+    <a href="#" class="btn" id="barWa">
+      Konsultasi Rakitan
+      <svg class="i"><use href="#arrow"/></svg>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+
+      <div>
+        <b>Walisongo Komputer</b>
+        <p>
+          © 2026 Walisongo Komputer Semarang. Solusi praktis dan terpercaya
+          memilih spesifikasi idaman Anda.
+        </p>
+      </div>
+
+      <nav>
+        <a href="panduan.html">Panduan Memilih Spesifikasi</a>
+        <a href="katalog.html">Katalog Toko</a>
+        <a href="bantuan.html">Hubungi Teknisi</a>
+        <a href="#">Kebijakan Privasi</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // DATA KATALOG (harga dalam rupiah)
+    var PRODUCTS = [
+      { id: "i5-14600k", cat: "cpu", catLabel: "Processor (CPU)", war: "Garansi 3 Thn", name: "Intel Core i5-14600K",
+        spec: "14 Core / 20 Thread • Socket LGA1700", price: 3850000, pop: 9,
+        pts: ["Sangat terbaik untuk kerja multitasking &amp; gaming", "Sudah ada grafis bawaan (iGPU UHD 770)"] },
+      { id: "r5-7600x", cat: "cpu", catLabel: "Processor (CPU)", war: "Garansi 3 Thn", name: "AMD Ryzen 5 7600X",
+        spec: "6 Core / 12 Thread • Socket AM5", price: 3950000, pop: 10,
+        pts: ["FPS tinggi hingga 5.3GHz untuk game berat &amp; kompetitif", "Platform terbaru DDR5, tahan lama ke depan"] },
+      { id: "rtx-4060", cat: "vga", catLabel: "VGA / Kartu Grafis", war: "Garansi Resmi 3 Thn", name: "ZOTAC RTX 4060 8GB",
+        spec: "Twin Edge • Hemat daya, TDP 115W", price: 4850000, pop: 12,
+        pts: ["Dukungan DLSS 3 untuk grafis halus &amp; realistis", "Cocok untuk gaming 1080p hingga rendering ringan"] },
+      { id: "b760m", cat: "mobo", catLabel: "Motherboard", war: "Garansi 3 Thn", name: "ASRock B760M Pro RS WiFi",
+        spec: "Chipset Intel B760 • Dukungan DDR5", price: 2150000, pop: 8,
+        pts: ["Sudah built-in WiFi 6E &amp; Bluetooth tanpa kabel", "2 slot SSD M.2 NVMe super kencang"] },
+      { id: "fury-32", cat: "ram", catLabel: "RAM &amp; Memory", war: "Garansi Lifetime", name: "Kingston FURY Beast 32GB",
+        spec: "2 × 16GB • DDR5 6000MHz CL36", price: 1850000, pop: 11,
+        pts: ["Kapasitas lega untuk multitasking &amp; game terkini", "Plug &amp; play XMP 3.0 / EXPO tanpa ribet setting"] },
+      { id: "kc3000", cat: "ssd", catLabel: "SSD &amp; Storage", war: "Garansi 5 Thn", name: "Kingston KC3000 1TB NVMe",
+        spec: "PCIe 4.0 Gen4 • 7000 MB/s Read", price: 1350000, pop: 7,
+        pts: ["Loading game &amp; booting Windows hitungan detik", "Dilengkapi heatspreader untuk menjaga suhu stabil"] },
+      { id: "cx650", cat: "psu", catLabel: "Power Supply", war: "Garansi 3 Thn", name: "Corsair CX650 650W",
+        spec: "Bersertifikat 80 Plus Bronze • Non-modular", price: 1050000, pop: 6,
+        pts: ["Daya stabil &amp; aman melindungi komponen utama", "Kipas hening dengan proteksi listrik lengkap"] },
+      { id: "spirit-120", cat: "case", catLabel: "CPU Cooler", war: "Garansi 2 Thn", name: "Assassin Spirit 120 V2",
+        spec: "Thermalright Air Cooler • 4 Heatpipe", price: 320000, pop: 5,
+        pts: ["Menjaga prosesor tetap adem saat dipakai berat", "Kipas 120mm tenang, nyaman untuk kerja lama"] },
+      { id: "air-100", cat: "case", catLabel: "Casing PC", war: "Garansi 1 Thn", name: "Montech Air 100 Mesh",
+        spec: "Micro-ATX • Termasuk 3 kipas ARGB", price: 850000, pop: 4,
+        pts: ["Airflow optimal, suhu komponen tetap rendah", "Panel kaca temper magnetik, mudah dilepas"] }
+    ];
+
+    var CATS = [
+      { key: "all",  label: "Semua Kategori" },
+      { key: "cpu",  label: "Processor (CPU)" },
+      { key: "vga",  label: "Kartu Grafis (VGA)" },
+      { key: "mobo", label: "Motherboard" },
+      { key: "ram",  label: "RAM &amp; Memory" },
+      { key: "ssd",  label: "SSD &amp; Storage" },
+      { key: "psu",  label: "Power Supply (PSU)" },
+      { key: "case", label: "Casing &amp; Cooler" }
+    ];
+
+    var state = { cat: "all", q: "", sort: "pop", picked: {} };
+    var $ = function (id) { return document.getElementById(id); };
+    var rp = function (n) { return "Rp " + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); };
+    var icons = ["ok", "gauge"];
+
+    function renderChips() {
+      $("chips").innerHTML = CATS.map(function (c) {
+        return '<button type="button" class="kt-chip' + (state.cat === c.key ? " on" : "") +
+               '" data-cat="' + c.key + '" aria-pressed="' + (state.cat === c.key) + '">' + c.label + '</button>';
+      }).join("");
+    }
+
+    function visible() {
+      var q = state.q.trim().toLowerCase();
+      var list = PRODUCTS.filter(function (p) {
+        var hay = (p.name + " " + p.spec + " " + p.catLabel).replace(/&amp;/g, "&").toLowerCase();
+        return (state.cat === "all" || p.cat === state.cat) && (!q || hay.indexOf(q) > -1);
+      });
+      list.sort(function (a, b) {
+        if (state.sort === "low") return a.price - b.price;
+        if (state.sort === "high") return b.price - a.price;
+        if (state.sort === "az") return a.name.localeCompare(b.name);
+        return b.pop - a.pop;
+      });
+      return list;
+    }
+
+    function renderGrid() {
+      var list = visible();
+      $("count").textContent = list.length + " komponen";
+      if (!list.length) {
+        $("kGrid").innerHTML = '<div class="kt-empty"><b>Komponen tidak ditemukan</b>' +
+          '<p>Coba kata kunci lain atau pilih kategori berbeda. Atau tanyakan stok langsung ke teknisi kami.</p></div>';
+        return;
+      }
+      $("kGrid").innerHTML = list.map(function (p) {
+        var on = !!state.picked[p.id];
+        return '<article class="kt-card' + (on ? " sel" : "") + '">' +
+          '<div class="kt-top"><span class="kt-cat">' + p.catLabel + '</span><span class="kt-war">' + p.war + '</span></div>' +
+          '<h3>' + p.name + '</h3><p class="kt-spec">' + p.spec + '</p>' +
+          '<ul class="kt-pts">' + p.pts.map(function (t, i) {
+            return '<li><svg class="i"><use href="#' + icons[i % 2] + '"/></svg><span>' + t + '</span></li>';
+          }).join("") + '</ul>' +
+          '<div class="kt-foot"><div><small>Harga Mulai</small><b>' + rp(p.price) + '</b></div>' +
+          '<button type="button" class="kt-add" data-id="' + p.id + '" aria-pressed="' + on + '">' +
+          '<svg class="i"><use href="#' + (on ? "check" : "plus") + '"/></svg>' + (on ? "Terpilih" : "Pilih Part") + '</button></div>' +
+          '</article>';
+      }).join("");
+    }
+
+    function renderBar() {
+      var ids = Object.keys(state.picked);
+      var total = 0, names = [];
+      PRODUCTS.forEach(function (p) {
+        if (state.picked[p.id]) { total += p.price; names.push("- " + p.name.replace(/&amp;/g, "&") + " (" + rp(p.price) + ")"); }
+      });
+      $("barCount").textContent = ids.length + " Komponen Terpilih";
+      $("barTotal").textContent = rp(total);
+      $("bar").classList.toggle("show", ids.length > 0);
+      var msg = "Halo teknisi Walisongo Komputer, saya ingin konsultasi rakitan dengan komponen berikut:\n" +
+                names.join("\n") + "\nEstimasi total: " + rp(total) + "\nMohon dicek kompatibilitas dan ketersediaan stoknya.";
+      $("barWa").setAttribute("data-wa", msg);
+    }
+
+    document.addEventListener("click", function (e) {
+      var chip = e.target.closest(".kt-chip");
+      if (chip) { state.cat = chip.dataset.cat; renderChips(); renderGrid(); return; }
+      var add = e.target.closest(".kt-add");
+      if (add) {
+        var id = add.dataset.id;
+        if (state.picked[id]) delete state.picked[id]; else state.picked[id] = true;
+        renderGrid(); renderBar(); return;
+      }
+      if (e.target.closest("#reset")) { state.picked = {}; renderGrid(); renderBar(); }
+    });
+
+    $("q").addEventListener("input", function (e) { state.q = e.target.value; renderGrid(); });
+    $("searchForm").addEventListener("submit", function (e) { e.preventDefault(); state.q = $("q").value; renderGrid(); });
+    $("kSort").addEventListener("change", function (e) { state.sort = e.target.value; renderGrid(); });
+
+    renderChips(); renderGrid(); renderBar();
+  </script>
 
 </body>
 </html>
