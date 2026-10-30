@@ -1,7 +1,7 @@
 /* Fungsi bersama: tautan WhatsApp dan peta toko.
    GANTI nomor dan alamat di bawah ini dengan data toko yang sebenarnya. */
 
-var WA_NUMBER = "6281234567890";
+var WA_NUMBER = "6281290242008";
 var MAP_QUERY = "Jl. Prof. Dr. Hamka, Tambakaji, Ngaliyan, Kota Semarang";
 
 function waLink(text) {

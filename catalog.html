@@ -58,14 +58,14 @@
 
       <nav>
         <a href="index.html">Beranda</a>
-        <a href="panduan.html">Rekomendasi Rakit PC</a>
-        <a href="katalog.html" class="on">Katalog Komponen</a>
-        <a href="bantuan.html">Bantuan &amp; Kontak</a>
+        <a href="recommendation.html">Rekomendasi Rakit PC</a>
+        <a href="catalog.html" class="on">Katalog Komponen</a>
+        <a href="contact.html">Bantuan &amp; Kontak</a>
       </nav>
 
-      <a href="bantuan.html" class="btn dark">
+      <a href="contact.html" class="btn dark">
         <svg class="i"><use href="#chat"/></svg>
-        Tanya Teknisi
+        Tanya Admin
       </a>
 
     </div>
@@ -125,13 +125,13 @@
         <b>Bingung apakah komponen cocok satu sama lain?</b>
         <p>
           Gunakan fitur Simulasi Rekomendasi Rakit PC otomatis kami, atau
-          hubungi teknisi Walisongo Komputer langsung untuk cek socket CPU,
+          hubungi admin Walisongo Komputer langsung untuk cek socket CPU,
           ketinggian casing, dan kapasitas watt daya PSU.
         </p>
       </div>
       <div class="kt-help-acts">
-        <a href="panduan.html" class="btn out">Simulasi Rakit PC</a>
-        <a href="#" class="btn dark" data-wa="Halo teknisi Walisongo Komputer, saya ingin konsultasi kecocokan komponen PC.">
+        <a href="recommendation.html" class="btn out">Simulasi Rakit PC</a>
+        <a href="#" class="btn dark" data-wa="Halo admin Walisongo Komputer, saya ingin konsultasi kecocokan komponen PC.">
           <svg class="i"><use href="#chat"/></svg>
           Konsultasi Gratis
         </a>
@@ -167,16 +167,15 @@
       </div>
 
       <nav>
-        <a href="panduan.html">Panduan Memilih Spesifikasi</a>
-        <a href="katalog.html">Katalog Toko</a>
-        <a href="bantuan.html">Hubungi Teknisi</a>
-        <a href="#">Kebijakan Privasi</a>
+        <a href="recommendation.html">Panduan Memilih Spesifikasi</a>
+        <a href="catalog.html">Katalog Toko</a>
+        <a href="contact.html">Hubungi Admin</a>
       </nav>
 
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
   <script>
     // DATA KATALOG (harga dalam rupiah)
     var PRODUCTS = [
@@ -252,7 +251,7 @@
       $("count").textContent = list.length + " komponen";
       if (!list.length) {
         $("kGrid").innerHTML = '<div class="kt-empty"><b>Komponen tidak ditemukan</b>' +
-          '<p>Coba kata kunci lain atau pilih kategori berbeda. Atau tanyakan stok langsung ke teknisi kami.</p></div>';
+          '<p>Coba kata kunci lain atau pilih kategori berbeda. Atau tanyakan stok langsung ke admin kami.</p></div>';
         return;
       }
       $("kGrid").innerHTML = list.map(function (p) {
@@ -279,7 +278,7 @@
       $("barCount").textContent = ids.length + " Komponen Terpilih";
       $("barTotal").textContent = rp(total);
       $("bar").classList.toggle("show", ids.length > 0);
-      var msg = "Halo teknisi Walisongo Komputer, saya ingin konsultasi rakitan dengan komponen berikut:\n" +
+      var msg = "Halo admin Walisongo Komputer, saya ingin konsultasi rakitan dengan komponen berikut:\n" +
                 names.join("\n") + "\nEstimasi total: " + rp(total) + "\nMohon dicek kompatibilitas dan ketersediaan stoknya.";
       $("barWa").setAttribute("data-wa", msg);
     }
