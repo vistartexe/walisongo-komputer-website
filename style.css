@@ -3086,3 +3086,54 @@ button.hs-soft {
     width: 170px;
   }
 }
+
+
+/* ==========================================================
+   SISTEM PAKAR - TAMBAHAN (v2)
+   ========================================================== */
+
+/* Toast notifikasi */
+.ws-toast {
+  position: fixed; left: 50%; bottom: 28px; z-index: 999;
+  transform: translate(-50%, 24px); opacity: 0; pointer-events: none;
+  max-width: min(92vw, 560px); padding: 13px 20px; border-radius: 12px;
+  background: var(--g800); color: #fff; font-size: 14px; font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .22); transition: opacity .25s, transform .25s;
+}
+.ws-toast.show { opacity: 1; transform: translate(-50%, 0); }
+.ws-toast.err { background: #a62929; }
+
+/* Budget spesifik */
+.pd-exact { margin-top: 22px; display: grid; gap: 8px; max-width: 420px; }
+.pd-exact label { font-size: 14px; font-weight: 600; color: var(--g900); }
+.pd-exact > div { display: flex; align-items: center; border: 1.5px solid var(--bd); border-radius: 12px; background: #fff; overflow: hidden; }
+.pd-exact > div:focus-within { border-color: var(--g700); }
+.pd-exact span { padding: 0 12px; font-weight: 700; color: var(--g700); background: var(--bg2); align-self: stretch; display: grid; place-items: center; }
+.pd-exact input { flex: 1; border: 0; outline: 0; padding: 12px 14px; font: inherit; color: var(--g900); min-width: 0; }
+.pd-exact small { color: var(--txt); font-size: 12.5px; }
+
+/* Halaman hasil: alasan per part & tukar part */
+.hs-part .hs-why-part { display: block; margin-top: 6px; font-size: 12.5px; color: #5d6b63; line-height: 1.45; }
+.hs-part .hs-stok { display: inline-block; margin-top: 6px; padding: 2px 9px; border-radius: 99px; background: #fff4d6; color: #8a5a00; font-size: 11.5px; font-weight: 600; }
+.hs-swap { display: block; margin-top: 10px; max-width: 100%; padding: 7px 10px; border: 1.5px solid var(--bd); border-radius: 9px; background: #fff; color: var(--g900); font: inherit; font-size: 12.5px; cursor: pointer; }
+.hs-swap:hover { border-color: var(--g700); }
+.hs-trace li { font-size: 13px; line-height: 1.5; margin-bottom: 6px; }
+
+/* Database GPU */
+.gd-filters { gap: 18px; flex-wrap: wrap; }
+.gd-filters label { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.gd-filters select { padding: 7px 10px; border: 1.5px solid var(--bd); border-radius: 9px; background: #fff; font: inherit; color: var(--g900); }
+.gd-wrap { overflow-x: auto; border: 1px solid var(--bd); border-radius: 14px; background: #fff; }
+.gd-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 720px; }
+.gd-table th { text-align: left; padding: 12px 14px; background: var(--bg2); color: var(--g900); font-weight: 700; white-space: nowrap; }
+.gd-table td { padding: 11px 14px; border-top: 1px solid var(--bd); }
+.gd-table tbody tr:hover { background: var(--bg2); }
+.gd-note { font-size: 12.5px; color: #6b776f; margin-top: 8px; }
+
+/* Cetak / simpan PDF lembar spesifikasi */
+@media print {
+  header, footer, .hs-acts, .hs-btns, .hs-fin, .hs-help, .hs-alt-h, .hs-alt, .hs-pdf, .hs-swap, .ws-toast { display: none !important; }
+  body { background: #fff; }
+  .hs-trace { display: block; }
+  .hs-trace[open] ol, .hs-trace ol { display: block; }
+}

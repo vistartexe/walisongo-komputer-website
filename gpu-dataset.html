@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walisongo Komputer | Database GPU</title>
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">   
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pd-body">
+
+  <!-- Kumpulan simbol ikon -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></symbol>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+      <symbol id="home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></symbol>
+      <symbol id="chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+      <symbol id="chevr" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+      <symbol id="ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></symbol>
+      <symbol id="chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+      <symbol id="gauge" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 14l4-4"/></symbol>
+      <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></symbol>
+      <symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="badge" viewBox="0 0 24 24"><path d="M12 3l2.4 1.6 2.9-.1 1 2.7 2.4 1.7-.9 2.8.9 2.8-2.4 1.7-1 2.7-2.9-.1L12 21l-2.4-1.6-2.9.1-1-2.7-2.4-1.7.9-2.8-.9-2.8 2.4-1.7 1-2.7 2.9.1z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="cog" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></symbol>
+      <symbol id="sort" viewBox="0 0 24 24"><path d="M4 7h16M7 12h10M10 17h4"/></symbol>
+      <symbol id="list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+      <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></symbol>
+      <symbol id="store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a3 3 0 0 0 5.3 2 3 3 0 0 0 5.4 0A3 3 0 0 0 20 9"/><path d="M5 12v8h14v-8M10 20v-5h4v5"/></symbol>
+      <symbol id="nav" viewBox="0 0 24 24"><path d="M12 3l7 17-7-4-7 4z"/></symbol>
+      <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></symbol>
+      <symbol id="map" viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+      <symbol id="tools" viewBox="0 0 24 24"><path d="M14 6l4 4M4 20l8-8M16 4l4 4-3 3-4-4zM4 8l4-4 3 3-4 4z"/></symbol>
+      <symbol id="grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="wrap">
+
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="Logo Walisongo Komputer">
+      </a>
+
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="recommendation.html">Rekomendasi Rakit PC</a>
+        <a href="catalog.html">Katalog Komponen</a>
+        <a href="gpu-dataset.html" class="on">Database GPU</a>
+        <a href="contact.html">Bantuan &amp; Kontak</a>
+      </nav>
+
+      <a href="contact.html" class="btn dark">
+        <svg class="i"><use href="#chat"/></svg>
+        Tanya Admin
+      </a>
+
+    </div>
+  </header>
+
+  <main class="pd-main">
+    <section class="pd-panel kt-hero">
+      <h1>Database Spesifikasi GPU</h1>
+      <p>Telusuri dataset kartu grafis (VRAM, bus memori, clock, tahun rilis) yang dipakai sistem pakar untuk memperkaya rekomendasi VGA.</p>
+      <form class="kt-search" id="gForm" role="search">
+        <svg class="i"><use href="#search"/></svg>
+        <input id="gq" type="search" placeholder="Cari GPU (mis. RTX 4070, RX 7800)…" aria-label="Cari GPU" autocomplete="off">
+        <button type="submit" class="btn dark">Cari</button>
+      </form>
+    </section>
+    <div class="kt-sort gd-filters">
+      <label>Produsen
+        <select id="gMfr"><option value="">Semua</option><option>NVIDIA</option><option>AMD</option><option>Intel</option><option>ATI</option></select>
+      </label>
+      <label>VRAM minimal
+        <select id="gVram"><option value="">Semua</option><option value="4">4 GB</option><option value="8">8 GB</option><option value="12">12 GB</option><option value="16">16 GB</option><option value="24">24 GB</option></select>
+      </label>
+      <label>Rilis sejak
+        <select id="gYear"><option value="">Semua</option><option value="2020">2020</option><option value="2022">2022</option><option value="2024">2024</option></select>
+      </label>
+      <span class="kt-count" id="gCount"></span>
+    </div>
+    <div class="gd-wrap">
+      <table class="gd-table">
+        <thead><tr><th>Produsen</th><th>Model GPU</th><th>Rilis</th><th>VRAM</th><th>Bus Memori</th><th>Clock GPU</th><th>Shader</th></tr></thead>
+        <tbody id="gBody"></tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin:18px 0"><button type="button" class="btn out" id="gMore" hidden>Tampilkan lebih banyak</button></div>
+    <p class="gd-note">Catatan data: kolom tipe memori dan chip pada dataset sumber tidak konsisten sehingga tidak ditampilkan. Nilai kosong (-) berarti tidak tersedia di dataset.</p>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+
+      <div>
+        <b>Walisongo Komputer</b>
+        <p>
+          © 2026 Walisongo Komputer Semarang. Solusi praktis dan terpercaya
+          memilih spesifikasi idaman Anda.
+        </p>
+      </div>
+
+      <nav>
+        <a href="recommendation.html">Panduan Memilih Spesifikasi</a>
+        <a href="catalog.html">Katalog Toko</a>
+        <a href="contact.html">Hubungi Admin</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    var off = 0, total = 0;
+    var $ = function (id) { return document.getElementById(id); };
+    function load(reset) {
+      if (reset) { off = 0; $("gBody").innerHTML = ""; }
+      var p = new URLSearchParams({ q: $("gq").value, mfr: $("gMfr").value, min_vram: $("gVram").value, year: $("gYear").value, offset: off });
+      WS.api("api/gpu.php?" + p.toString()).then(function (d) {
+        total = d.total;
+        $("gBody").insertAdjacentHTML("beforeend", d.rows.map(function (r) {
+          var v = function (x, u) { return x == null ? "-" : WS.esc(x) + (u || ""); };
+          return "<tr><td>" + WS.esc(r.manufacturer) + "</td><td><b>" + WS.esc(r.product_name) + "</b></td><td>" + v(r.release_year) +
+            "</td><td>" + (r.mem_size_gb == null ? "-" : parseFloat(r.mem_size_gb) + " GB") + "</td><td>" + v(r.mem_bus_width, "-bit") +
+            "</td><td>" + v(r.gpu_clock_mhz, " MHz") + "</td><td>" + v(r.unified_shader) + "</td></tr>";
+        }).join(""));
+        off += d.rows.length;
+        $("gCount").textContent = total + " GPU ditemukan";
+        $("gMore").hidden = off >= total;
+        if (!total) { $("gBody").innerHTML = '<tr><td colspan="7" style="text-align:center">GPU tidak ditemukan.</td></tr>'; }
+      }).catch(function (e) { WS.toast(e.message, true); });
+    }
+    $("gForm").addEventListener("submit", function (e) { e.preventDefault(); load(true); });
+    ["gMfr", "gVram", "gYear"].forEach(function (id) { $(id).addEventListener("change", function () { load(true); }); });
+    $("gMore").addEventListener("click", function () { load(false); });
+    load(true);
+  </script>
+</body>
+</html>

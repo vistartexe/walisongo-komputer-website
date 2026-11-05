@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Walisongo Komputer | Katalog Komponen</title>
 
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">   
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">   
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +60,7 @@
         <a href="index.html">Beranda</a>
         <a href="recommendation.html">Rekomendasi Rakit PC</a>
         <a href="catalog.html" class="on">Katalog Komponen</a>
+        <a href="gpu-dataset.html">Database GPU</a>
         <a href="contact.html">Bantuan &amp; Kontak</a>
       </nav>
 
@@ -174,37 +175,10 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="js/common.js"></script>
   <script>
     // DATA KATALOG (harga dalam rupiah)
-    var PRODUCTS = [
-      { id: "i5-14600k", cat: "cpu", catLabel: "Processor (CPU)", war: "Garansi 3 Thn", name: "Intel Core i5-14600K",
-        spec: "14 Core / 20 Thread • Socket LGA1700", price: 3850000, pop: 9,
-        pts: ["Sangat terbaik untuk kerja multitasking &amp; gaming", "Sudah ada grafis bawaan (iGPU UHD 770)"] },
-      { id: "r5-7600x", cat: "cpu", catLabel: "Processor (CPU)", war: "Garansi 3 Thn", name: "AMD Ryzen 5 7600X",
-        spec: "6 Core / 12 Thread • Socket AM5", price: 3950000, pop: 10,
-        pts: ["FPS tinggi hingga 5.3GHz untuk game berat &amp; kompetitif", "Platform terbaru DDR5, tahan lama ke depan"] },
-      { id: "rtx-4060", cat: "vga", catLabel: "VGA / Kartu Grafis", war: "Garansi Resmi 3 Thn", name: "ZOTAC RTX 4060 8GB",
-        spec: "Twin Edge • Hemat daya, TDP 115W", price: 4850000, pop: 12,
-        pts: ["Dukungan DLSS 3 untuk grafis halus &amp; realistis", "Cocok untuk gaming 1080p hingga rendering ringan"] },
-      { id: "b760m", cat: "mobo", catLabel: "Motherboard", war: "Garansi 3 Thn", name: "ASRock B760M Pro RS WiFi",
-        spec: "Chipset Intel B760 • Dukungan DDR5", price: 2150000, pop: 8,
-        pts: ["Sudah built-in WiFi 6E &amp; Bluetooth tanpa kabel", "2 slot SSD M.2 NVMe super kencang"] },
-      { id: "fury-32", cat: "ram", catLabel: "RAM &amp; Memory", war: "Garansi Lifetime", name: "Kingston FURY Beast 32GB",
-        spec: "2 × 16GB • DDR5 6000MHz CL36", price: 1850000, pop: 11,
-        pts: ["Kapasitas lega untuk multitasking &amp; game terkini", "Plug &amp; play XMP 3.0 / EXPO tanpa ribet setting"] },
-      { id: "kc3000", cat: "ssd", catLabel: "SSD &amp; Storage", war: "Garansi 5 Thn", name: "Kingston KC3000 1TB NVMe",
-        spec: "PCIe 4.0 Gen4 • 7000 MB/s Read", price: 1350000, pop: 7,
-        pts: ["Loading game &amp; booting Windows hitungan detik", "Dilengkapi heatspreader untuk menjaga suhu stabil"] },
-      { id: "cx650", cat: "psu", catLabel: "Power Supply", war: "Garansi 3 Thn", name: "Corsair CX650 650W",
-        spec: "Bersertifikat 80 Plus Bronze • Non-modular", price: 1050000, pop: 6,
-        pts: ["Daya stabil &amp; aman melindungi komponen utama", "Kipas hening dengan proteksi listrik lengkap"] },
-      { id: "spirit-120", cat: "case", catLabel: "CPU Cooler", war: "Garansi 2 Thn", name: "Assassin Spirit 120 V2",
-        spec: "Thermalright Air Cooler • 4 Heatpipe", price: 320000, pop: 5,
-        pts: ["Menjaga prosesor tetap adem saat dipakai berat", "Kipas 120mm tenang, nyaman untuk kerja lama"] },
-      { id: "air-100", cat: "case", catLabel: "Casing PC", war: "Garansi 1 Thn", name: "Montech Air 100 Mesh",
-        spec: "Micro-ATX • Termasuk 3 kipas ARGB", price: 850000, pop: 4,
-        pts: ["Airflow optimal, suhu komponen tetap rendah", "Panel kaca temper magnetik, mudah dilepas"] }
-    ];
+    var PRODUCTS = []; // diisi dari api/parts.php (tabel komponen)
 
     var CATS = [
       { key: "all",  label: "Semua Kategori" },
@@ -297,7 +271,17 @@
     $("searchForm").addEventListener("submit", function (e) { e.preventDefault(); state.q = $("q").value; renderGrid(); });
     $("kSort").addEventListener("change", function (e) { state.sort = e.target.value; renderGrid(); });
 
-    renderChips(); renderGrid(); renderBar();
+    renderChips(); renderBar();
+    $("kGrid").innerHTML = '<div class="kt-empty"><b>Memuat katalog…</b></div>';
+    WS.api("api/parts.php").then(function (list) {
+      PRODUCTS = list.filter(function (p) { return !p.habis; }).map(function (p) {
+        p.name = WS.esc(p.name); p.spec = WS.esc(p.spec); p.war = WS.esc(p.war); p.catLabel = WS.esc(p.catLabel);
+        p.pts = p.pts.map(WS.esc); return p;
+      });
+      renderGrid(); renderBar();
+    }).catch(function (e) {
+      $("kGrid").innerHTML = '<div class="kt-empty"><b>Katalog tidak dapat dimuat</b><p>' + WS.esc(e.message) + '</p></div>';
+    });
   </script>
 
 </body>

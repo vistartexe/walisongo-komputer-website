@@ -7,7 +7,7 @@
 
     <title>Walisongo Komputer | Panduan Konsultasi Komponen PC</title>
 
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -105,6 +105,7 @@
                 <a href="index.html">Beranda</a>
                 <a href="recommendation.html" class="on">Rekomendasi Rakit PC</a>
                 <a href="catalog.html">Katalog Komponen</a>
+                <a href="gpu-dataset.html">Database GPU</a>
                 <a href="contact.html">Bantuan &amp; Kontak</a>
             </nav>
 
@@ -621,6 +622,16 @@
             </div>
 
 
+            <!-- BUDGET SPESIFIK (OPSIONAL) -->
+            <div class="pd-exact">
+                <label for="budgetExact">Atau masukkan budget spesifik (opsional, dalam Rupiah):</label>
+                <div>
+                    <span>Rp</span>
+                    <input type="number" id="budgetExact" min="500000" max="500000000" step="100000" placeholder="contoh: 12500000" inputmode="numeric">
+                </div>
+                <small>Jika diisi, nilai ini menggantikan rentang budget di atas.</small>
+            </div>
+
             <!-- PRIORITAS RACIKAN -->
             <div class="pd-q" style="margin-top: 34px;">
                 <div>
@@ -927,7 +938,7 @@
                 </p>
             </div>
 
-            <a href="#" class="btn pd-wa">
+            <a href="#" class="btn pd-wa" data-wa="Halo admin Walisongo Komputer, saya ingin konsultasi spesifikasi komponen PC sesuai kebutuhan saya.">
                 <svg class="i">
                     <use href="#chat"/>
                 </svg>
@@ -981,5 +992,8 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/recommendation.js"></script>
 </body>
 </html>
